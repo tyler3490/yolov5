@@ -60,16 +60,6 @@ from speed import tennisDetection
 
 speedDetect = tennisDetection()
 
-
-
-
-
-# NEED TO PUSH YOLO CHANGES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
-
-
-
 @smart_inference_mode()
 def run(
         weights=ROOT / 'yolov5s.pt',  # model path or triton URL
