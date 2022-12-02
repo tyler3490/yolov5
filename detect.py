@@ -206,7 +206,6 @@ def run(
             # Stream results THIS IS RETURNING im, NOT im0
             else:
                 if (predict != None):
-                    print("hit")
                     predict = kf.predict(predict[0], predict[1])
                     cv2.circle(im0, (predict[0], predict[1]), 5, (255, 0, 0), 4)
             # Stream results
@@ -271,21 +270,22 @@ def parse_opt():
     # parser.add_argument('--weights', nargs='+', type=str, default='/Users/tyler/Documents/GitHub/capstone-project-eagle-eye/models/baseball/20octbaseball357epoch.pt', help='model path or triton URL')
     parser.add_argument('--weights', nargs='+', type=str, default='/Users/tyler/Documents/GitHub/capstone-project-eagle-eye/models/tennis/tennisModel.pt', help='model path or triton URL')
     #for testing
-    parser.add_argument('--source', type=str, default=0, help='file/dir/URL/glob/screen/0(webcam)')
+    # parser.add_argument('--source', type=str, default=0, help='file/dir/URL/glob/screen/0(webcam)')
     # parser.add_argument('--source', type=str, default='/Users/tyler/Documents/GitHub/capstone-project-eagle-eye/streams.txt', help='file/dir/URL/glob/screen/0(webcam)')
     # parser.add_argument('--source', type=str, default='/Users/tyler/Documents/GitHub/capstone-project-eagle-eye/soccerdemo.mp4', help='file/dir/URL/glob/screen/0(webcam)')
     # parser.add_argument('--source', type=str, default='/Users/tyler/Documents/GitHub/capstone-project-eagle-eye/swingvisionlowangle.mp4', help='file/dir/URL/glob/screen/0(webcam)')
     # parser.add_argument('--source', type=str, default='/Users/tyler/Documents/GitHub/capstone-project-eagle-eye/swingvisionmedangle1.mp4', help='file/dir/URL/glob/screen/0(webcam)')
     # parser.add_argument('--source', type=str, default='/Users/tyler/Documents/GitHub/capstone-project-eagle-eye/swingvisionmedangle2.mp4', help='file/dir/URL/glob/screen/0(webcam)')
-    # parser.add_argument('--source', type=str, default='/Users/tyler/Documents/GitHub/capstone-project-eagle-eye/longballrublev.mp4', help='file/dir/URL/glob/screen/0(webcam)')
+    parser.add_argument('--source', type=str, default='/Users/tyler/Documents/GitHub/capstone-project-eagle-eye/longballrublev.mp4', help='file/dir/URL/glob/screen/0(webcam)')
     # parser.add_argument('--source', type=str, default='/Users/tyler/Documents/GitHub/capstone-project-e  agle-eye/bouncingontheline6nov.mp4', help='file/dir/URL/glob/screen/0(webcam)')
     # parser.add_argument('--source', type=str, default='/Users/tyler/Documents/GitHub/capstone-project-eagle-eye/3secQatarTest.mp4', help='file/dir/URL/glob/screen/0(webcam)')
     # parser.add_argument('--source', type=str, default='/Users/tyler/Documents/GitHub/capstone-project-eagle-eye/tennis_rally.mp4', help='file/dir/URL/glob/screen/0(webcam)')
     # parser.add_argument('--source', type=str, default='/Users/tyler/Documents/GitHub/capstone-project-eagle-eye/serves.mp4', help='file/dir/URL/glob/screen/0(webcam)')
+    # parser.add_argument('--source', type=str, default='/Users/tyler/Documents/GitHub/capstone-project-eagle-eye/qatarTennis.mp4', help='file/dir/URL/glob/screen/0(webcam)')
 
     parser.add_argument('--sport-flag', type=int, default=1, help='Flag for extra processing')
-    # parser.add_argument('--prerecorded-flag', type=int, default=1, help='Flag for extra processing')
-    parser.add_argument('--camera-mode-flag', type=int, default=1, help='Flag for extra processing')
+    parser.add_argument('--prerecorded-flag', type=int, default=1, help='Flag for extra processing')
+    # parser.add_argument('--camera-mode-flag', type=int, default=1, help='Flag for extra processing')
     # parser.add_argument('--sport-flag', type=int, default=0, help='Flag for extra processing')
 
     # parser.add_argument('--weights', nargs='+', type=str, default=ROOT / 'yolov5s.pt', help='model path or triton URL')
